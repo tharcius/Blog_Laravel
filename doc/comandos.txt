@@ -1,0 +1,2 @@
+laravel new blog
+artisan key:generate
