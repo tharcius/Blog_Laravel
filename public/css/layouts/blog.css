@@ -156,6 +156,7 @@ h3 {
     background: none;
 }
 
+
 @media (min-width: 48em) {
     .content {
         padding: 2em 3em 0;
@@ -171,5 +172,42 @@ h3 {
         position: fixed;
         top: 0;
         bottom: 0;
+    }
+}
+
+/* TvS Mod*/
+.logobg {
+    background: transparent url('../../img/background/lizard.png') no-repeat scroll 50% 50% ;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.tecnologia{
+    position: absolute;
+    bottom: 0em;
+    text-align: right;
+    right: 2em;
+}
+
+@media(max-width: 64em) {
+    .logobg {
+        background-image: none;
+    }
+
+    .tecnologia{
+        width: 75%;
+        left: 2em;
+    }
+}
+
+@media(max-width: 48em) {
+    .logobg {
+        background: transparent url('../../img/background/pad01.png') no-repeat scroll 50% 0%;
+    }
+
+    .tecnologia{
+        display: none;
     }
 }

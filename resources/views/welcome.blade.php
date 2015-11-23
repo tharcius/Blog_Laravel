@@ -50,8 +50,14 @@
 
     </head>
     <body>
+
         <div id="layout" class="pure-g">
-            <div class="sidebar pure-u-1 pure-u-md-1-4">
+            <div class="sidebar pure-u-1 pure-u-md-1-4" style="background: rgba(75, 75, 130, 0.95) none repeat scroll 0% 0%;">
+                <div class="logobg pure-u-md-1">
+                    8582-0290 - Jorge
+                    8418-0240 - Mãe do Jorge
+                    &nbsp;
+                </div>
                 <div class="header">
                     <h1 class="brand-title">BrasilPAD Blog</h1>
                     <h2 class="brand-tagline">A nossa comunidade precisa de você</h2>
@@ -67,7 +73,7 @@
                         {{--</ul>--}}
                     {{--</nav>--}}
                 </div>
-                <div class="pure-u-md-1" style="position: absolute; bottom: 0em; text-align: right; right: 2em;">
+                <div class="tecnologia pure-u-md-1">
                     <h3 class="content-subhead">Code.Education - Laravel Express</h3>
                     <h5>PHP 5.6 - HTML 5 - CSS 3 - Pure CSS - YUI Library</h5>
                 </div>
@@ -77,7 +83,7 @@
                 <div>
                     <!-- A wrapper for all the blog posts -->
                     <div class="posts">
-                        <h1 class="content-subhead">Pinned Post</h1>
+                        <h1 class="content-subhead">Últimas publicações</h1>
 
                         <!-- A single blog post -->
                         <section class="post">
@@ -123,10 +129,13 @@
 
                     <div class="footer">
                         <div class="pure-menu pure-menu-horizontal">
+                            <h3 class="content-subhead">Links interessantes</h3>
                             <ul>
-                                <li class="pure-menu-item"><a href="http://purecss.io/" class="pure-menu-link">About</a></li>
-                                <li class="pure-menu-item"><a href="http://twitter.com/yuilibrary/" class="pure-menu-link">Twitter</a></li>
-                                <li class="pure-menu-item"><a href="http://github.com/yahoo/pure/" class="pure-menu-link">GitHub</a></li>
+                                <li class="pure-menu-item"><a href="http://code.education/" class="pure-menu-link">Code.Education</a></li>
+                                <li class="pure-menu-item"><a href="http://www.schoolofnet.com/" class="pure-menu-link">School of Net</a></li>
+                                <li class="pure-menu-item"><a href="http://www.caelum.com.br/" class="pure-menu-link">Caelum</a></li>
+                                <li class="pure-menu-item"><a href="http://www.casadocodigo.com.br/" class="pure-menu-link">Casa do Código</a></li>
+
                             </ul>
                         </div>
                     </div>
