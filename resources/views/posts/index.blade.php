@@ -59,17 +59,6 @@
                 <div class="header">
                     <h1 class="brand-title">BrasilPAD Blog</h1>
                     <h2 class="brand-tagline">A nossa comunidade precisa de você</h2>
-
-                    {{--<nav class="nav">--}}
-                        {{--<ul class="nav-list">--}}
-                            {{--<li class="nav-item">--}}
-                                {{--<a class="pure-button" href="http://purecss.io">Pure</a>--}}
-                            {{--</li>--}}
-                            {{--<li class="nav-item">--}}
-                                {{--<a class="pure-button" href="http://yuilibrary.com">YUI Library</a>--}}
-                            {{--</li>--}}
-                        {{--</ul>--}}
-                    {{--</nav>--}}
                 </div>
                 <div class="tecnologia pure-u-md-1">
                     <h3 class="content-subhead">Code.Education - Laravel Express</h3>
@@ -79,50 +68,30 @@
 
             <div class="content pure-u-1 pure-u-md-3-4">
                 <div>
-                    <!-- A wrapper for all the blog posts -->
                     <div class="posts">
                         <h1 class="content-subhead">Últimas publicações</h1>
 
-                        <!-- A single blog post -->
+                        @foreach ($posts as $post)
+                        <?php $post = (object) $post;?>
+
                         <section class="post">
                             <header class="post-header">
-                                <img class="post-avatar" alt="Tilo Mitra&#x27;s avatar" height="48" width="48" src="img/common/tilo-avatar.png">
+                                <img class="post-avatar" alt="{{ $post->User['name'] }}" height="48" width="48" src="img/avatar/{{ $post->User['id'].'.png' }}">
 
-                                <h2 class="post-title">Introducing Pure</h2>
+                                <h2 class="post-title">{{ $post->title}}</h2>
 
                                 <p class="post-meta">
-                                    By <a href="#" class="post-author">Tilo Mitra</a> under <a class="post-category post-category-design" href="#">CSS</a> <a class="post-category post-category-pure" href="#">Pure</a>
+                                    Por <a href="#" class="post-author">{{ $post->User['name'] }}</a>, criado em {{ $post->date }}
                                 </p>
                             </header>
 
                             <div class="post-description">
                                 <p>
-                                    Yesterday at CSSConf, we launched Pure – a new CSS library. Phew! Here are the <a href="https://speakerdeck.com/tilomitra/pure-bliss">slides from the presentation</a>. Although it looks pretty minimalist, we’ve been working on Pure for several months. After many iterations, we have released Pure as a set of small, responsive, CSS modules that you can use in every web project.
+                                    {!! $post->content !!}
                                 </p>
                             </div>
                         </section>
-                    </div>
-
-                    <div class="posts">
-                        <h1 class="content-subhead">Recent Posts</h1>
-
-                        <section class="post">
-                            <header class="post-header">
-                                <img class="post-avatar" alt="Andrew Wooldridge&#x27;s avatar" height="48" width="48" src="img/common/andrew-avatar.png">
-
-                                <h2 class="post-title">YUI 3.10.2 Released</h2>
-
-                                <p class="post-meta">
-                                    By <a class="post-author" href="#">Andrew Wooldridge</a> under <a class="post-category post-category-yui" href="#">YUI</a>
-                                </p>
-                            </header>
-
-                            <div class="post-description">
-                                <p>
-                                    We are happy to announce the release of YUI 3.10.2! You can find it now on the Yahoo! CDN, download it directly, or pull it in via npm. We’ve also updated the YUI Library website with the latest documentation.
-                                </p>
-                            </div>
-                        </section>
+                        @endforeach
                     </div>
 
                     <div class="footer">

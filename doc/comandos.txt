@@ -1,2 +1,6 @@
 laravel new blog
 artisan key:generate
+artisan make:controller User
+artisan make:controller Post
+artisan make:model User -m
+artisan make:model Post -m
